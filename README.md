@@ -6,6 +6,13 @@ This Packer template will register with Red Hat, create the VM, then unregister 
 
 Set `RHN_USERNAME` and `RHN_PASSWORD` in your environment prior to running `packer build rhel7.json`.
 
+To build only for `Virtualbox` and only RHEL 7.5 use the following command which uses the variables specific for RHEL 7.5 and passes these to the main template `rhel.json`:
+
+```bash
+packer build -only=virtualbox-iso -var-file=rhel75.json rhel.json
+```
+
+
 # Virtualbox Guest Additions #
 
 Packer will automatically download the proper guest additions for the version of VirtualBox that is running and upload those guest additions into the virtual machine so that provisioners can easily install them.
