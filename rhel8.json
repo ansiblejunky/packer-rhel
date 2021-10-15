@@ -1,12 +1,10 @@
 {
-    "_comment": "Build with `packer build rhel.json`",
-    "description": "Red Hat template",
+    "description": "Red Hat Enterprise Linux template",
     "builders": [
       {
         "boot_command": [
           "<up><wait><tab><wait> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/{{ user `kickstart` }}<enter><wait5>"
         ],
-        
         "disk_size": "{{ user `disk_size` }}",
         "guest_os_type": "{{ user `vmware_guest_os_type` }}",
         "headless": "{{ user `headless` }}",

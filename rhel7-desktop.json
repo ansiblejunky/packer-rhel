@@ -1,0 +1,7 @@
+{
+  "_comment": "Build with `packer build -only=virtualbox-iso -var-file=rhel7-desktop.json rhel7.json`",
+  "cpus": "2",
+  "disk_size": "130048",
+  "kickstart": "ks7-desktop.cfg",
+  "memory": "1024"
+}
