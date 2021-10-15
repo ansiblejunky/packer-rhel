@@ -2,3 +2,8 @@
 *.iso
 boxes
 builds
+output*
+.packer
+.vagrant
+.DS_Store
+packer.log
